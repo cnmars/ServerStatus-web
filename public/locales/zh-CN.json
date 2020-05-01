@@ -4,12 +4,17 @@
   "LOC": "地区",
   "UPTIME": "运行",
   "LOAD": "负载",
-  "NETWORK": "网络",
+  "NETWORK": "网络(B/s)",
+  "TRAFFIC": "流量(B)",
   "CPU": "CPU",
   "RAM": "RAM",
   "HDD": "HDD",
   "LOADING": "数据加载中...",
   "WAIT": "正在首次从服务器端加载监控数据，请稍候...",
   "LAST_UPDATE": "数据最后更新时间：{updatedTime}",
-  "DAYS": "天"
+  "DAYS": "天",
+  "Second": "秒",
+  "Minute": "分",
+  "Hour": "小时",
+  "Day": "天"
 }

@@ -9,7 +9,9 @@
     ],
     "globals": {
         "Atomics": "readonly",
-        "SharedArrayBuffer": "readonly"
+        "SharedArrayBuffer": "readonly",
+        "fetch": false,
+        "window": false
     },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -24,5 +26,21 @@
         "@typescript-eslint"
     ],
     "rules": {
+        "import/extensions": "off",
+        "import/no-unresolved": "off",
+        "import/no-extraneous-dependencies": "off",
+        "camelcase": "off",
+        "no-unused-vars": "off",
+        "no-param-reassign": "off",
+        "no-return-assign": "off",
+        "no-console": "off",
+        "no-plusplus": "off",
+        "react/jsx-filename-extension": [1, {
+            "extensions": [".js", ".jsx", ".tsx"]
+        }],
+        "react/prop-types": "off",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-no-target-blank": "off",
+        "max-len": "off"
     }
 }
