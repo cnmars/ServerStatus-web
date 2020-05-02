@@ -5,7 +5,8 @@ import React, { useState, useEffect } from 'react';
 import {
   Layout, Row, Col, Spin,
 } from 'antd';
-import ServerRow from './ServerRow';
+import Link from './components/Link';
+import XServerList from './components/ServerList';
 
 require('intl/locale-data/jsonp/en.js');
 require('intl/locale-data/jsonp/zh.js');
@@ -65,20 +66,20 @@ const App: React.FC = () => {
             <Col xs={24} sm={23} md={23} lg={22} xl={20} xxl={16}>
               {initDone ? (
                 <Spin size="large" spinning={!isOnline} tip="Loading...">
-                  <ServerRow {...serverData} />
+                  <XServerList {...serverData} />
                 </Spin>
               ) : null}
             </Col>
           </Row>
         </Content>
         <Footer className="footer">
-          <a href="https://github.com/flxxyz/ServerStatus-web" target="_blank" rel="external noopener">WebUI</a>
+          <Link href="https://github.com/flxxyz/ServerStatus-web/" target="_blank" rel="external noreferrer noopener" title="WebUI" />
           {' for '}
-          <a href="https://github.com/flxxyz/ServerStatus/" rel="external noopener">ServerStatus</a>
+          <Link href="https://github.com/flxxyz/ServerStatus/" target="_blank" rel="external noreferrer noopener" title="ServerStatus" />
           {', made by '}
-          <a href="https://www.ofcss.com/" rel="external noopener">Kairee</a>
+          <Link href="https://www.ofcss.com/" target="_blank" rel="external noreferrer noopener" title="Kairee" />
           {', ❤customized by '}
-          <a href="https://flxxyz.com/" rel="external noopener">flxxyz</a>
+          <Link href="https://flxxyz.com/" target="_blank" rel="external noreferrer noopener" title="flxxyz" />
         </Footer>
       </Layout>
     </div>

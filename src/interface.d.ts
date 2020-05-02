@@ -45,3 +45,10 @@ export interface SergateData {
   servers?: Array<Server>;
   updated?: string;
 }
+
+export interface Link {
+  href: string;
+  target?: string;
+  rel?: string;
+  title: string;
+}
