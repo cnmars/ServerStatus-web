@@ -2,6 +2,7 @@
   "NAME": "名称",
   "TYPE": "类型",
   "LOC": "地区",
+  "PLATFORM": "平台",
   "UPTIME": "运行",
   "LOAD": "负载",
   "NETWORK": "网络(B/s)",

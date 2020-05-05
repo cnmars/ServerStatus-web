@@ -52,3 +52,7 @@ export interface Link {
   rel?: string;
   title: string;
 }
+
+export interface Platform {
+  name: string;
+}

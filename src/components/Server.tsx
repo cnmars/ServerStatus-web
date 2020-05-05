@@ -6,7 +6,7 @@ import { Server } from '../interface';
 import { byteUnit, transUptime } from '../util';
 
 const resGutter = {
-  xs: 8, sm: 16, md: 24, lg: 32,
+  xs: 8, sm: 8, md: 16, lg: 16,
 };
 
 function onlineTag(online: boolean, label: string): React.ReactElement {
@@ -59,10 +59,10 @@ const XServer: React.FC<Server> = (props: Server) => {
       <Col xs={0} sm={0} md={0} lg={1}>{onlineTag(ipv6_support, 'IPv6')}</Col>
       <Col xs={3} sm={3} md={3} lg={2}>{name}</Col>
       <Col xs={3} sm={2} md={2} lg={1}><Flag loc={region} title={location} /></Col>
-      <Col xs={3} sm={4} md={2} lg={2}>{transUptime(uptime)}</Col>
+      <Col xs={3} sm={4} md={2} lg={1}>{transUptime(uptime)}</Col>
       <Col xs={0} sm={0} md={0} lg={1}>{load_avg[0]}</Col>
       <Col xs={0} sm={0} md={4} lg={3}>{networkTips(traffic_rx, traffic_tx)}</Col>
-      <Col xs={0} sm={0} md={4} lg={3}>{trafficTips(traffic_rx_total, traffic_tx_total)}</Col>
+      <Col xs={0} sm={0} md={0} lg={3}>{trafficTips(traffic_rx_total, traffic_tx_total)}</Col>
       <Col xs={3} sm={3} md={3} lg={3}>
         <Progress strokeWidth={12} percent={cpu_percent} status="active" />
       </Col>
@@ -71,7 +71,7 @@ const XServer: React.FC<Server> = (props: Server) => {
           <Progress strokeWidth={12} percent={Number(((mem_used / mem_total) * 100).toFixed(1))} status="active" />
         </Tooltip>
       </Col>
-      <Col xs={3} sm={3} md={3} lg={3}>
+      <Col xs={0} sm={3} md={3} lg={3}>
         <Tooltip placement="left" title={hddTips(hdd_used, hdd_total)}>
           <Progress strokeWidth={12} percent={Number(((hdd_used / hdd_total) * 100).toFixed(1))} status="active" />
         </Tooltip>
