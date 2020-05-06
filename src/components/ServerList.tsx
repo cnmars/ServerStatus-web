@@ -18,7 +18,8 @@ const XServerList: React.FC<SergateData> = (props: SergateData) => {
         <Col xs={0} sm={0} md={0} lg={1}>IPv6</Col>
         <Col xs={3} sm={3} md={3} lg={2}>{intl.get('NAME')}</Col>
         <Col xs={3} sm={2} md={2} lg={1}>{intl.get('LOC')}</Col>
-        <Col xs={3} sm={4} md={2} lg={1}>{intl.get('UPTIME')}</Col>
+        <Col xs={3} sm={2} md={2} lg={1}>{intl.get('PLATFORM')}</Col>
+        <Col xs={3} sm={4} md={2} lg={2}>{intl.get('UPTIME')}</Col>
         <Col xs={0} sm={0} md={0} lg={1}>{intl.get('LOAD')}</Col>
         <Col xs={0} sm={0} md={4} lg={3}>{intl.get('NETWORK')}</Col>
         <Col xs={0} sm={0} md={0} lg={3}>{intl.get('TRAFFIC')}</Col>

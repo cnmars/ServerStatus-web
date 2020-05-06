@@ -3,14 +3,32 @@ export interface Map {
   [index: number]: any,
 }
 
+enum ServerItemOSName {
+  windows,
+  darwin,
+  linux,
+  centos,
+  fedora,
+  debian,
+  ubuntu,
+  suse,
+  freebsd,
+  unknown,
+}
+
+export interface ServerItemOS {
+  name: ServerItemOSName;
+  version: string;
+  arch: string;
+}
+
 export interface Server {
   name: string;
   location: string;
   region: string;
   ipv4_support: boolean;
   ipv6_support: boolean;
-  os: string;
-  arch: string;
+  os: ServerItemOS;
   physical_cpu_core: number;
   logical_cpu_core: number;
   cpu_core: number;
@@ -51,8 +69,4 @@ export interface Link {
   target?: string;
   rel?: string;
   title: string;
-}
-
-export interface Platform {
-  name: string;
 }

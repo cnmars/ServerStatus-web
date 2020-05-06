@@ -40,7 +40,7 @@ const App: React.FC = () => {
       });
 
     const getServer = (state: string) => {
-      fetch('http://106.15.93.198:10002')
+      fetch('https://status.flxxyz.com/r.json')
         .then((res) => res.json())
         .then((data) => {
           setServerData({

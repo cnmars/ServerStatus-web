@@ -4,6 +4,7 @@ import {
 } from 'antd';
 import { Server } from '../interface';
 import { byteUnit, transUptime } from '../util';
+import XPlatform from './Platform';
 
 const resGutter = {
   xs: 8, sm: 8, md: 16, lg: 16,
@@ -46,7 +47,7 @@ const Flag: React.FC<{ loc: string, title: string }> = ({ loc, title }) => (
 
 const XServer: React.FC<Server> = (props: Server) => {
   const {
-    name, location, region,
+    name, location, region, os,
     cpu_percent, load_avg, uptime, ipv4_support, ipv6_support,
     traffic_rx, traffic_tx, traffic_rx_total, traffic_tx_total,
     mem_used, mem_total, swap_used, swap_total,
@@ -59,7 +60,8 @@ const XServer: React.FC<Server> = (props: Server) => {
       <Col xs={0} sm={0} md={0} lg={1}>{onlineTag(ipv6_support, 'IPv6')}</Col>
       <Col xs={3} sm={3} md={3} lg={2}>{name}</Col>
       <Col xs={3} sm={2} md={2} lg={1}><Flag loc={region} title={location} /></Col>
-      <Col xs={3} sm={4} md={2} lg={1}>{transUptime(uptime)}</Col>
+      <Col xs={3} sm={2} md={2} lg={1}><XPlatform {...os} /></Col>
+      <Col xs={3} sm={4} md={2} lg={2}>{transUptime(uptime)}</Col>
       <Col xs={0} sm={0} md={0} lg={1}>{load_avg[0]}</Col>
       <Col xs={0} sm={0} md={4} lg={3}>{networkTips(traffic_rx, traffic_tx)}</Col>
       <Col xs={0} sm={0} md={0} lg={3}>{trafficTips(traffic_rx_total, traffic_tx_total)}</Col>
